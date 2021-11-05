@@ -1,0 +1,66 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="models\" />
+    <None Remove="entities\" />
+    <None Remove="middleware\" />
+    <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="FluentValidation.AspNetCore" />
+    <None Remove="Microsoft.AspNetCore.Authentication.JwtBearer" />
+    <None Remove="Microsoft.EntityFrameworkCore" />
+    <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
+    <None Remove="Microsoft.EntityFrameworkCore.Tools" />
+    <None Remove="NLog.Web.AspNetCore" />
+    <None Remove="Exceptions\" />
+    <None Remove="models\Validators\" />
+    <None Remove="Services\" />
+    <None Remove="Controllers\" />
+    <None Remove="Swashbuckle.AspNetCore" />
+    <None Remove="NuGet.PackageManagement" />
+    <None Remove="Controllers\user\" />
+    <None Remove="Controllers\admin\" />
+    <None Remove="Controllers\worker\" />
+    <None Remove="Services\admin\" />
+    <None Remove="Services\worker\" />
+    <None Remove="Services\user\" />
+    <None Remove="models\admin\" />
+    <None Remove="models\worker\" />
+    <None Remove="models\user\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="models\" />
+    <Folder Include="entities\" />
+    <Folder Include="middleware\" />
+    <Folder Include="Exceptions\" />
+    <Folder Include="models\Validators\" />
+    <Folder Include="Services\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Controllers\user\" />
+    <Folder Include="Controllers\admin\" />
+    <Folder Include="Controllers\worker\" />
+    <Folder Include="Services\admin\" />
+    <Folder Include="Services\worker\" />
+    <Folder Include="Services\user\" />
+    <Folder Include="models\admin\" />
+    <Folder Include="models\worker\" />
+    <Folder Include="models\user\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="10.3.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.11">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="NLog.Web.AspNetCore" Version="4.14.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="NuGet.PackageManagement" Version="5.11.0" />
+  </ItemGroup>
+</Project>
