@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 using cinema_reservation_system_individual_auth.middleware;
 using cinema_reservation_system_individual_auth.models.admin;
 using cinema_reservation_system_individual_auth.models.Validators;
+using cinema_reservation_system_individual_auth.models.worker;
 using cinema_reservation_system_individual_auth.Services;
 using cinema_reservation_system_individual_auth.Services.admin;
+using cinema_reservation_system_individual_auth.Services.worker;
 using cinema_reservation_system_individual_auth.Validators;
 using FluentValidation;
 using FluentValidation.AspNetCore;
@@ -39,7 +41,7 @@ namespace cinema_reservation_system_individual_auth
         {
             var authenticationSettings = new AuthenticationSettings();
             Configuration.GetSection("Authentication").Bind(authenticationSettings);
-            services.AddScoped<ErrorHandlingMiddleware>();
+            //services.AddScoped<ErrorHandlingMiddleware>();
             services.AddSingleton(authenticationSettings);
             services.AddAuthentication(option =>
             {
@@ -72,6 +74,10 @@ namespace cinema_reservation_system_individual_auth
             services.AddScoped<IWorkerService, WorkerService>();
             services.AddScoped<IValidator<CreateWorkerDto>, CreateWorkerDtoValidator>();
 
+            
+            services.AddScoped<IRoomService, RoomService>();
+            services.AddScoped<IValidator<UpdateRoomDto>, UpdateRoomDtoValidator>();
+            services.AddScoped<IValidator<CreateRoomDto>, CreateRoomDtoValidator>();
 
             services.AddScoped<IUserContextService, UserContextService>();
             services.AddHttpContextAccessor();
