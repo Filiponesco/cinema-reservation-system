@@ -9,7 +9,9 @@ namespace cinema_reservation_system_individual_auth
 {
     public class RegisterAdminDto
     {
+        [Required]
         public string Email { get; set; }
+        [Required]
         public string Password { get; set; }
     }
 }

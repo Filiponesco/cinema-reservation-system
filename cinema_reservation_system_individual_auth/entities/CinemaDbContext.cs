@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using cinema_reservation_system_individual_auth.entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace cinema_reservation_system_individual_auth
@@ -18,6 +19,7 @@ namespace cinema_reservation_system_individual_auth
 ";
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }
+        public DbSet<Room> Rooms { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -28,6 +30,15 @@ namespace cinema_reservation_system_individual_auth
             modelBuilder.Entity<Role>()
                 .Property(u => u.Name)
                 .IsRequired();
+
+            modelBuilder.Entity<Room>()
+               .Property(u => u.Name)
+               .IsRequired().HasMaxLength(64);
+
+            modelBuilder.Entity<Room>()
+               .Property(u => u.SeatsCount)
+               .IsRequired();
+        
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

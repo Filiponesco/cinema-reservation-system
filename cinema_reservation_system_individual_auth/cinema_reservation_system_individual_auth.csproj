@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <DockerComposeProjectPath>../docker-compose.dcproj</DockerComposeProjectPath>
+    <UserSecretsId>aa8f8077-7e0f-44e5-9dcd-c82e87d1ac43</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -30,6 +32,7 @@
     <None Remove="models\admin\" />
     <None Remove="models\worker\" />
     <None Remove="models\user\" />
+    <None Remove="Helpers\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="models\" />
@@ -48,6 +51,7 @@
     <Folder Include="models\admin\" />
     <Folder Include="models\worker\" />
     <Folder Include="models\user\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
