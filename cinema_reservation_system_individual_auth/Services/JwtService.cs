@@ -42,7 +42,7 @@ namespace cinema_reservation_system_individual_auth.Services
             //{
             //    throw new BadRequestException("Invalid username or password");
             //}
-            if (user.Password != dto.Password)
+            if (user.Password != CaesarCipher.Encipher(dto.Password, Consts.CeasarCipherKey))
             {
                 throw new BadRequestException("Invalid username or password");
             }

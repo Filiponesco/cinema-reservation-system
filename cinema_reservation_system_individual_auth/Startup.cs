@@ -87,6 +87,9 @@ namespace cinema_reservation_system_individual_auth
             services.AddScoped<IValidator<UpdateSeanceDto>, UpdateSeanceDtoValidator>();
             services.AddScoped<IValidator<CreateSeanceDto>, CreateSeanceDtoValidator>();
 
+            services.AddScoped<IReserveService, ReserveService>();
+            services.AddScoped<IValidator<CreateReserveDto>, CreateReserveDtoValidator>();
+
             services.AddScoped<IUserContextService, UserContextService>();
             services.AddHttpContextAccessor();
             services.AddSwaggerGen();

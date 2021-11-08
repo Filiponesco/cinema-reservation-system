@@ -11,6 +11,16 @@ namespace cinema_reservation_system_individual_auth
     {
         public CinemaMappingProfile()
         {
+
+            CreateMap<User, LoginDto>()
+                .ForMember(m => m.Password, c => c.MapFrom(s => CaesarCipher.Decipher(s.Password, Consts.CeasarCipherKey)));
+
+            CreateMap<RegisterAdminDto, User>()
+                .ForMember(m => m.RoleId, c => c.MapFrom(s => 2))
+                .ForMember(m => m.Password, c => c.MapFrom(s => CaesarCipher.Encipher(RandomStringGenerator.RandomString(Consts.RandomPasswordLength), Consts.CeasarCipherKey)));
+
+
+
             CreateMap<User, WorkerDto>()
                 .ForMember(m => m.Password, c => c.MapFrom(s => CaesarCipher.Decipher(s.Password, Consts.CeasarCipherKey)));
 
@@ -24,6 +34,8 @@ namespace cinema_reservation_system_individual_auth
             CreateMap<CreateMovieDto, Movie>();
             CreateMap<Seance, SeanceDto>();
             CreateMap<CreateSeanceDto, Seance>();
+            CreateMap<Reservation, ReserveDto>();
+            CreateMap<CreateReserveDto, Reservation>();
         }
     }
 }
