@@ -18,6 +18,7 @@ namespace cinema_reservation_system_individual_auth.Services.worker
         void Delete(int id);
         void Update(UpdateSeanceDto dto);
         int GetCountById(int id);
+        IEnumerable<SeanceDto> GetAllByIdAndDateTime(DateTime dateTime);
     }
     public class SeanceService : ISeanceService
     {
@@ -68,6 +69,13 @@ namespace cinema_reservation_system_individual_auth.Services.worker
             var SeancesDtos = _mapper.Map<List<SeanceDto>>(Seances);
 
             return SeancesDtos;
+        }
+
+        public IEnumerable<SeanceDto> GetAllByIdAndDateTime(DateTime dateTime)
+        {
+            var seances = _dbContext.Seances.Where(s => s.DateTime.Year == dateTime.Year && s.DateTime.Month == dateTime.Month && s.DateTime.Day == dateTime.Day);
+            var seancesDtos = _mapper.Map<List<SeanceDto>>(seances);
+            return seancesDtos;
         }
 
         public SeanceDto GetById(int id)

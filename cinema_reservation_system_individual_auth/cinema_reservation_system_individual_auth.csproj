@@ -23,7 +23,6 @@
     <None Remove="Controllers\" />
     <None Remove="Swashbuckle.AspNetCore" />
     <None Remove="NuGet.PackageManagement" />
-    <None Remove="Controllers\user\" />
     <None Remove="Controllers\admin\" />
     <None Remove="Controllers\worker\" />
     <None Remove="Services\admin\" />
@@ -44,7 +43,6 @@
     <Folder Include="models\Validators\" />
     <Folder Include="Services\" />
     <Folder Include="Controllers\" />
-    <Folder Include="Controllers\user\" />
     <Folder Include="Controllers\admin\" />
     <Folder Include="Controllers\worker\" />
     <Folder Include="Services\admin\" />
