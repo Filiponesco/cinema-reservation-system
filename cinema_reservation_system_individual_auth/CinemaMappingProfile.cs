@@ -20,6 +20,10 @@ namespace cinema_reservation_system_individual_auth
 
             CreateMap<Room, RoomDto>();
             CreateMap<CreateRoomDto, Room>();
+            CreateMap<Movie, MovieDto>();
+            CreateMap<CreateMovieDto, Movie>();
+            CreateMap<Seance, SeanceDto>();
+            CreateMap<CreateSeanceDto, Seance>();
         }
     }
 }

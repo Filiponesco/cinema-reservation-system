@@ -33,6 +33,8 @@
     <None Remove="models\worker\" />
     <None Remove="models\user\" />
     <None Remove="Helpers\" />
+    <None Remove="models\worker\room\" />
+    <None Remove="models\worker\room %28kopia%29\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="models\" />
@@ -52,6 +54,9 @@
     <Folder Include="models\worker\" />
     <Folder Include="models\user\" />
     <Folder Include="Helpers\" />
+    <Folder Include="models\worker\room\" />
+    <Folder Include="models\worker\movie\" />
+    <Folder Include="models\worker\seance\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />

@@ -20,6 +20,8 @@ namespace cinema_reservation_system_individual_auth
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<Room> Rooms { get; set; }
+        public DbSet<Movie> Movies { get; set; }
+        public DbSet<Seance> Seances { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -38,7 +40,24 @@ namespace cinema_reservation_system_individual_auth
             modelBuilder.Entity<Room>()
                .Property(u => u.SeatsCount)
                .IsRequired();
-        
+
+            modelBuilder.Entity<Movie>()
+               .Property(u => u.Name)
+               .IsRequired().HasMaxLength(500);
+
+            modelBuilder.Entity<Movie>()
+              .Property(u => u.DurationInMinutes)
+              .IsRequired();
+            modelBuilder.Entity<Seance>()
+             .Property(u => u.DateTime)
+             .IsRequired();
+            modelBuilder.Entity<Seance>()
+             .Property(u => u.RoomId)
+             .IsRequired();
+            modelBuilder.Entity<Seance>()
+             .Property(u => u.MovieId)
+             .IsRequired();
+
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

@@ -6,14 +6,15 @@ using FluentValidation;
 
 namespace cinema_reservation_system_individual_auth.models.Validators
 {
-    public class UpdateRoomDtoValidator : AbstractValidator<UpdateRoomDto>
+    public class UpdateMovieDtoValidator : AbstractValidator<UpdateMovieDto>
     {
-        public UpdateRoomDtoValidator(CinemaDbContext dbContext)
+        public UpdateMovieDtoValidator(CinemaDbContext dbContext)
         {
             RuleFor(x => x.Name)
                .NotEmpty()
                .MaximumLength(64).MinimumLength(1);
-            RuleFor(x => x.SeatsCount).GreaterThan(0).LessThanOrEqualTo(10000);
+
+            RuleFor(x => x.DurationInMinutes).GreaterThan(1).LessThanOrEqualTo(5000);
                
         }
     }

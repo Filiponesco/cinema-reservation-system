@@ -79,6 +79,14 @@ namespace cinema_reservation_system_individual_auth
             services.AddScoped<IValidator<UpdateRoomDto>, UpdateRoomDtoValidator>();
             services.AddScoped<IValidator<CreateRoomDto>, CreateRoomDtoValidator>();
 
+            services.AddScoped<IMovieService, MovieService>();
+            services.AddScoped<IValidator<UpdateMovieDto>, UpdateMovieDtoValidator>();
+            services.AddScoped<IValidator<CreateMovieDto>, CreateMovieDtoValidator>();
+
+            services.AddScoped<ISeanceService, SeanceService>();
+            services.AddScoped<IValidator<UpdateSeanceDto>, UpdateSeanceDtoValidator>();
+            services.AddScoped<IValidator<CreateSeanceDto>, CreateSeanceDtoValidator>();
+
             services.AddScoped<IUserContextService, UserContextService>();
             services.AddHttpContextAccessor();
             services.AddSwaggerGen();
