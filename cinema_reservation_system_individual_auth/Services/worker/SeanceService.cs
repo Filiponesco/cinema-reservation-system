@@ -40,7 +40,7 @@ namespace cinema_reservation_system_individual_auth.Services.worker
         public int Create(CreateSeanceDto dto)
         {
             var Seance = _mapper.Map<Seance>(dto);
-
+            
             _dbContext.Add(Seance);
             _dbContext.SaveChanges();
 

@@ -41,7 +41,7 @@ namespace cinema_reservation_system_individual_auth
         {
             var authenticationSettings = new AuthenticationSettings();
             Configuration.GetSection("Authentication").Bind(authenticationSettings);
-            //services.AddScoped<ErrorHandlingMiddleware>();
+
             services.AddSingleton(authenticationSettings);
             services.AddAuthentication(option =>
             {
@@ -66,6 +66,8 @@ namespace cinema_reservation_system_individual_auth
             services.AddScoped<CinemaSeeder>();
             services.AddAutoMapper(this.GetType().Assembly);
             services.AddScoped<IJwtService, JwtService>();
+            services.AddScoped<ErrorHandlingMiddleware>();
+
             services.AddScoped<IAdminAccountService, AdminAccountService>();
             services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
             services.AddScoped<IValidator<RegisterAdminDto>, RegisterUserDtoValidator>();
@@ -105,7 +107,7 @@ namespace cinema_reservation_system_individual_auth
                 app.UseDeveloperExceptionPage();
             }
 
-            // app.UseMiddleware<ErrorHandlingMiddleware>();
+            app.UseMiddleware<ErrorHandlingMiddleware>();
             app.UseAuthentication();
             app.UseHttpsRedirection();
             app.UseSwagger();

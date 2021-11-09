@@ -15,6 +15,8 @@ namespace cinema_reservation_system_individual_auth.models.Validators
                 .Custom((value, context) =>
                 {
                 // TODO przy tworzeniu seansu sprawdzać, czy dana sala w danym okienku czasowym (czas sprzątania + czas trwania + czas sprzątania) jest wolna
+
+
                 });
                
         }
