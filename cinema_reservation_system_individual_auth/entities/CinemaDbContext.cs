@@ -16,7 +16,7 @@ namespace cinema_reservation_system_individual_auth
 Initial Catalog=CinemaReservationDatabase;
 Persist Security Info=False;
 User ID=student-ms;
-Password={your_password};
+Password=PolapPolap1;
 MultipleActiveResultSets=False;
 Encrypt=True;
 TrustServerCertificate=False;
