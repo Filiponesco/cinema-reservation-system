@@ -12,15 +12,10 @@ namespace cinema_reservation_system_individual_auth
     {
         private string _connectionString =
             @"
-   Server=tcp:cinema-reservation-server.database.windows.net,1433;
+   Data Source=tcp:cinema-reservation-server.database.windows.net,1433;
 Initial Catalog=CinemaReservationDatabase;
-Persist Security Info=False;
 User ID=student-ms;
 Password=PolapPolap1;
-MultipleActiveResultSets=False;
-Encrypt=True;
-TrustServerCertificate=False;
-Connection Timeout=30;
 ";
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }
