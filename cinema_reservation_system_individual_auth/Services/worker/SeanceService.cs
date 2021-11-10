@@ -6,6 +6,7 @@ using cinema_reservation_system_individual_auth.entities;
 using cinema_reservation_system_individual_auth.Exceptions;
 using cinema_reservation_system_individual_auth.models.worker;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace cinema_reservation_system_individual_auth.Services.worker
@@ -18,7 +19,7 @@ namespace cinema_reservation_system_individual_auth.Services.worker
         void Delete(int id);
         void Update(UpdateSeanceDto dto);
         int GetCountById(int id);
-        IEnumerable<SeanceDto> GetAllByIdAndDateTime(DateTime dateTime);
+        IEnumerable<SeanceDto> GetAllByDateTime(DateTime dateTime);
     }
     public class SeanceService : ISeanceService
     {
@@ -40,7 +41,20 @@ namespace cinema_reservation_system_individual_auth.Services.worker
         public int Create(CreateSeanceDto dto)
         {
             var Seance = _mapper.Map<Seance>(dto);
-            
+
+            var seances = _dbContext.Seances.Include(s => s.Movie).Include(s => s.Room);
+
+            foreach (var s in seances) {
+                var starTime = s.DateTime;
+                var breakDuration = s.Room.CleaningTimeInMinutes;
+                var movieDuration = s.Movie.DurationInMinutes;
+                var endTime = starTime.AddMinutes(breakDuration).AddMinutes(movieDuration).AddMinutes(breakDuration);
+                if (starTime <= dto.DateTime && dto.DateTime <= endTime)
+                {
+                    throw new RequestNotAllowedException(String.Format("Room is occupied from {0} to {1}", starTime, endTime));
+                }
+            }
+
             _dbContext.Add(Seance);
             _dbContext.SaveChanges();
 
@@ -68,14 +82,14 @@ namespace cinema_reservation_system_individual_auth.Services.worker
 
             var SeancesDtos = _mapper.Map<List<SeanceDto>>(Seances);
 
-            return SeancesDtos;
+            return SeancesDtos.OrderByDescending(s => s.DateTime);
         }
 
-        public IEnumerable<SeanceDto> GetAllByIdAndDateTime(DateTime dateTime)
+        public IEnumerable<SeanceDto> GetAllByDateTime(DateTime dateTime)
         {
             var seances = _dbContext.Seances.Where(s => s.DateTime.Year == dateTime.Year && s.DateTime.Month == dateTime.Month && s.DateTime.Day == dateTime.Day);
             var seancesDtos = _mapper.Map<List<SeanceDto>>(seances);
-            return seancesDtos;
+            return seancesDtos.OrderByDescending(s => s.DateTime);
         }
 
         public SeanceDto GetById(int id)
@@ -92,7 +106,13 @@ namespace cinema_reservation_system_individual_auth.Services.worker
 
         public int GetCountById(int id)
         {
-            return 7; // TODO zwracać liczbę zarezerwowanych miejsc
+            var seance = _dbContext.Seances.Include(s => s.Room).FirstOrDefault(s => s.Id == id);
+            if (seance == null)
+            {
+                throw new NotFoundException("Seance not found");
+            }
+            var room = seance.Room;
+            return room.SeatsCount;
         }
 
         public void Update(UpdateSeanceDto dto)

@@ -6,6 +6,7 @@ using cinema_reservation_system_individual_auth.entities;
 using cinema_reservation_system_individual_auth.Exceptions;
 using cinema_reservation_system_individual_auth.models.worker;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace cinema_reservation_system_individual_auth.Services.worker
@@ -43,6 +44,30 @@ namespace cinema_reservation_system_individual_auth.Services.worker
                 Count = dto.Count,
 
             };
+
+            var seance = _dbContext.Seances.Include(s => s.Room).FirstOrDefault(s => s.Id == dto.SeanceId);
+
+            if (seance == null)
+            {
+                throw new NotFoundException("Seance not found");
+            }
+
+            var allSeats = seance.Room.SeatsCount;
+
+            var allReservationOnSeance = _dbContext.Reservations.Where(r => r.SeanceId == seance.Id);
+
+
+            var occupatiedSeats = 0;
+            foreach (var r in allReservationOnSeance)
+            {
+                occupatiedSeats += r.Count;
+            }
+            if (allSeats < occupatiedSeats + dto.Count)
+            {
+                throw new RequestNotAllowedException(String.Format("Can not make the reservation, because we have {0} free seats", allSeats - occupatiedSeats));
+            }
+
+
 
             _dbContext.Reservations.Add(reserve);
             _dbContext.SaveChanges();

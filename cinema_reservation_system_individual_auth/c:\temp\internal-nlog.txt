@@ -539,3 +539,159 @@
 2021-11-09 01:08:11.0110 Info Validating config: TargetNames=allfile, exceptions, ConfigItems=40, FilePath=/Users/appvinio/VisualStudioProjects/cinema_reservation_system_individual_auth/cinema_reservation_system_individual_auth/bin/Debug/net5.0/NLog.config
 2021-11-09 01:08:11.0265 Info Configuration initialized.
 2021-11-09 01:08:11.0265 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-09 10:20:31.3578 Info Message Template Auto Format enabled
+2021-11-09 10:20:31.3691 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-09 10:20:31.4001 Info Adding target FileTarget(Name=exceptions)
+2021-11-09 10:20:31.4007 Info Adding target FileTarget(Name=allfile)
+2021-11-09 10:20:31.4588 Info Validating config: TargetNames=allfile, exceptions, ConfigItems=40, FilePath=/Users/appvinio/VisualStudioProjects/cinema_reservation_system_individual_auth/cinema_reservation_system_individual_auth/bin/Debug/net5.0/NLog.config
+2021-11-09 10:20:31.4722 Info Configuration initialized.
+2021-11-09 10:20:31.4728 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-09 10:35:42.3142 Info Message Template Auto Format enabled
+2021-11-09 10:35:42.3254 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-09 10:35:42.3574 Info Adding target FileTarget(Name=exceptions)
+2021-11-09 10:35:42.3580 Info Adding target FileTarget(Name=allfile)
+2021-11-09 10:35:42.4026 Info Validating config: TargetNames=allfile, exceptions, ConfigItems=40, FilePath=/Users/appvinio/VisualStudioProjects/cinema_reservation_system_individual_auth/cinema_reservation_system_individual_auth/bin/Debug/net5.0/NLog.config
+2021-11-09 10:35:42.4159 Info Configuration initialized.
+2021-11-09 10:35:42.4159 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-09 10:36:49.0892 Info Message Template Auto Format enabled
+2021-11-09 10:36:49.1023 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-09 10:36:49.1331 Info Adding target FileTarget(Name=exceptions)
+2021-11-09 10:36:49.1338 Info Adding target FileTarget(Name=allfile)
+2021-11-09 10:36:49.1744 Info Validating config: TargetNames=allfile, exceptions, ConfigItems=40, FilePath=/Users/appvinio/VisualStudioProjects/cinema_reservation_system_individual_auth/cinema_reservation_system_individual_auth/bin/Debug/net5.0/NLog.config
+2021-11-09 10:36:49.1874 Info Configuration initialized.
+2021-11-09 10:36:49.1874 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-09 10:36:51.8062 Info AppDomain Shutting down. Logger closing...
+2021-11-09 10:36:51.8121 Info Logger has been shut down.
+2021-11-09 10:36:56.2976 Info Message Template Auto Format enabled
+2021-11-09 10:36:56.3085 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-09 10:36:56.3396 Info Adding target FileTarget(Name=exceptions)
+2021-11-09 10:36:56.3396 Info Adding target FileTarget(Name=allfile)
+2021-11-09 10:36:56.3796 Info Validating config: TargetNames=allfile, exceptions, ConfigItems=40, FilePath=/Users/appvinio/VisualStudioProjects/cinema_reservation_system_individual_auth/cinema_reservation_system_individual_auth/bin/Debug/net5.0/NLog.config
+2021-11-09 10:36:56.3924 Info Configuration initialized.
+2021-11-09 10:36:56.3931 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-09 10:40:50.6565 Info Message Template Auto Format enabled
+2021-11-09 10:40:50.6668 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-09 10:40:50.6969 Info Adding target FileTarget(Name=exceptions)
+2021-11-09 10:40:50.6969 Info Adding target FileTarget(Name=allfile)
+2021-11-09 10:40:50.7373 Info Validating config: TargetNames=allfile, exceptions, ConfigItems=40, FilePath=/Users/appvinio/VisualStudioProjects/cinema_reservation_system_individual_auth/cinema_reservation_system_individual_auth/bin/Debug/net5.0/NLog.config
+2021-11-09 10:40:50.7499 Info Configuration initialized.
+2021-11-09 10:40:50.7499 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-10 17:51:04.2008 Info Message Template Auto Format enabled
+2021-11-10 17:51:04.2127 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-10 17:51:04.2452 Info Adding target FileTarget(Name=exceptions)
+2021-11-10 17:51:04.2452 Info Adding target FileTarget(Name=allfile)
+2021-11-10 17:51:04.2909 Info Validating config: TargetNames=allfile, exceptions, ConfigItems=40, FilePath=/Users/appvinio/VisualStudioProjects/cinema_reservation_system_individual_auth/cinema_reservation_system_individual_auth/bin/Debug/net5.0/NLog.config
+2021-11-10 17:51:04.3039 Info Configuration initialized.
+2021-11-10 17:51:04.3045 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-10 19:10:14.9996 Info Message Template Auto Format enabled
+2021-11-10 19:10:15.0110 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-10 19:10:15.0429 Info Adding target FileTarget(Name=exceptions)
+2021-11-10 19:10:15.0429 Info Adding target FileTarget(Name=allfile)
+2021-11-10 19:10:15.0834 Info Validating config: TargetNames=allfile, exceptions, ConfigItems=40, FilePath=/Users/appvinio/VisualStudioProjects/cinema_reservation_system_individual_auth/cinema_reservation_system_individual_auth/bin/Debug/net5.0/NLog.config
+2021-11-10 19:10:15.0963 Info Configuration initialized.
+2021-11-10 19:10:15.0969 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-10 19:20:32.4638 Info Message Template Auto Format enabled
+2021-11-10 19:20:32.4737 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-10 19:20:32.5045 Info Adding target FileTarget(Name=exceptions)
+2021-11-10 19:20:32.5052 Info Adding target FileTarget(Name=allfile)
+2021-11-10 19:20:32.5696 Info Validating config: TargetNames=allfile, exceptions, ConfigItems=40, FilePath=/Users/appvinio/VisualStudioProjects/cinema_reservation_system_individual_auth/cinema_reservation_system_individual_auth/bin/Debug/net5.0/NLog.config
+2021-11-10 19:20:32.5832 Info Configuration initialized.
+2021-11-10 19:20:32.5832 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-10 19:20:59.9396 Info Message Template Auto Format enabled
+2021-11-10 19:20:59.9510 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-10 19:20:59.9857 Info Adding target FileTarget(Name=exceptions)
+2021-11-10 19:20:59.9865 Info Adding target FileTarget(Name=allfile)
+2021-11-10 19:21:00.0308 Info Validating config: TargetNames=allfile, exceptions, ConfigItems=40, FilePath=/Users/appvinio/VisualStudioProjects/cinema_reservation_system_individual_auth/cinema_reservation_system_individual_auth/bin/Debug/net5.0/NLog.config
+2021-11-10 19:21:00.0437 Info Configuration initialized.
+2021-11-10 19:21:00.0443 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-10 19:34:47.6654 Info Message Template Auto Format enabled
+2021-11-10 19:34:47.6754 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-10 19:34:47.7066 Info Adding target FileTarget(Name=exceptions)
+2021-11-10 19:34:47.7073 Info Adding target FileTarget(Name=allfile)
+2021-11-10 19:34:47.7514 Info Validating config: TargetNames=allfile, exceptions, ConfigItems=40, FilePath=/Users/appvinio/VisualStudioProjects/cinema_reservation_system_individual_auth/cinema_reservation_system_individual_auth/bin/Debug/net5.0/NLog.config
+2021-11-10 19:34:47.7647 Info Configuration initialized.
+2021-11-10 19:34:47.7653 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-10 19:36:39.8166 Info Message Template Auto Format enabled
+2021-11-10 19:36:39.8266 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-10 19:36:39.8582 Info Adding target FileTarget(Name=exceptions)
+2021-11-10 19:36:39.8582 Info Adding target FileTarget(Name=allfile)
+2021-11-10 19:36:39.9010 Info Validating config: TargetNames=allfile, exceptions, ConfigItems=40, FilePath=/Users/appvinio/VisualStudioProjects/cinema_reservation_system_individual_auth/cinema_reservation_system_individual_auth/bin/Debug/net5.0/NLog.config
+2021-11-10 19:36:39.9138 Info Configuration initialized.
+2021-11-10 19:36:39.9144 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-10 20:16:32.2322 Info Message Template Auto Format enabled
+2021-11-10 20:16:32.2438 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-10 20:16:32.2767 Info Adding target FileTarget(Name=exceptions)
+2021-11-10 20:16:32.2767 Info Adding target FileTarget(Name=allfile)
+2021-11-10 20:16:32.3381 Info Validating config: TargetNames=allfile, exceptions, ConfigItems=40, FilePath=/Users/appvinio/VisualStudioProjects/cinema_reservation_system_individual_auth/cinema_reservation_system_individual_auth/bin/Debug/net5.0/NLog.config
+2021-11-10 20:16:32.3514 Info Configuration initialized.
+2021-11-10 20:16:32.3520 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-10 20:20:12.9738 Info Message Template Auto Format enabled
+2021-11-10 20:20:12.9841 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-10 20:20:13.0156 Info Adding target FileTarget(Name=exceptions)
+2021-11-10 20:20:13.0170 Info Adding target FileTarget(Name=allfile)
+2021-11-10 20:20:13.0606 Info Validating config: TargetNames=allfile, exceptions, ConfigItems=40, FilePath=/Users/appvinio/VisualStudioProjects/cinema_reservation_system_individual_auth/cinema_reservation_system_individual_auth/bin/Debug/net5.0/NLog.config
+2021-11-10 20:20:13.0735 Info Configuration initialized.
+2021-11-10 20:20:13.0735 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-10 20:25:26.9652 Info Message Template Auto Format enabled
+2021-11-10 20:25:26.9748 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-10 20:25:27.0052 Info Adding target FileTarget(Name=exceptions)
+2021-11-10 20:25:27.0060 Info Adding target FileTarget(Name=allfile)
+2021-11-10 20:25:27.0472 Info Validating config: TargetNames=allfile, exceptions, ConfigItems=40, FilePath=/Users/appvinio/VisualStudioProjects/cinema_reservation_system_individual_auth/cinema_reservation_system_individual_auth/bin/Debug/net5.0/NLog.config
+2021-11-10 20:25:27.0602 Info Configuration initialized.
+2021-11-10 20:25:27.0602 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-10 20:26:51.3842 Info Message Template Auto Format enabled
+2021-11-10 20:26:51.3954 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-10 20:26:51.4281 Info Adding target FileTarget(Name=exceptions)
+2021-11-10 20:26:51.4288 Info Adding target FileTarget(Name=allfile)
+2021-11-10 20:26:51.4722 Info Validating config: TargetNames=allfile, exceptions, ConfigItems=40, FilePath=/Users/appvinio/VisualStudioProjects/cinema_reservation_system_individual_auth/cinema_reservation_system_individual_auth/bin/Debug/net5.0/NLog.config
+2021-11-10 20:26:51.4852 Info Configuration initialized.
+2021-11-10 20:26:51.4857 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-10 20:28:10.1388 Info Message Template Auto Format enabled
+2021-11-10 20:28:10.1501 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-10 20:28:10.1825 Info Adding target FileTarget(Name=exceptions)
+2021-11-10 20:28:10.1832 Info Adding target FileTarget(Name=allfile)
+2021-11-10 20:28:10.2454 Info Validating config: TargetNames=allfile, exceptions, ConfigItems=40, FilePath=/Users/appvinio/VisualStudioProjects/cinema_reservation_system_individual_auth/cinema_reservation_system_individual_auth/bin/Debug/net5.0/NLog.config
+2021-11-10 20:28:10.2596 Info Configuration initialized.
+2021-11-10 20:28:10.2602 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-10 20:29:57.6597 Info Message Template Auto Format enabled
+2021-11-10 20:29:57.6707 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-10 20:29:57.7054 Info Adding target FileTarget(Name=exceptions)
+2021-11-10 20:29:57.7062 Info Adding target FileTarget(Name=allfile)
+2021-11-10 20:29:57.7689 Info Validating config: TargetNames=allfile, exceptions, ConfigItems=40, FilePath=/Users/appvinio/VisualStudioProjects/cinema_reservation_system_individual_auth/cinema_reservation_system_individual_auth/bin/Debug/net5.0/NLog.config
+2021-11-10 20:29:57.7822 Info Configuration initialized.
+2021-11-10 20:29:57.7828 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-10 20:36:40.4064 Info Message Template Auto Format enabled
+2021-11-10 20:36:40.4173 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-10 20:36:40.4491 Info Adding target FileTarget(Name=exceptions)
+2021-11-10 20:36:40.4498 Info Adding target FileTarget(Name=allfile)
+2021-11-10 20:36:40.4928 Info Validating config: TargetNames=allfile, exceptions, ConfigItems=40, FilePath=/Users/appvinio/VisualStudioProjects/cinema_reservation_system_individual_auth/cinema_reservation_system_individual_auth/bin/Debug/net5.0/NLog.config
+2021-11-10 20:36:40.5056 Info Configuration initialized.
+2021-11-10 20:36:40.5062 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-10 21:01:32.6417 Info Message Template Auto Format enabled
+2021-11-10 21:01:32.6528 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-10 21:01:32.6845 Info Adding target FileTarget(Name=exceptions)
+2021-11-10 21:01:32.6845 Info Adding target FileTarget(Name=allfile)
+2021-11-10 21:01:32.7312 Info Validating config: TargetNames=allfile, exceptions, ConfigItems=40, FilePath=/Users/appvinio/VisualStudioProjects/cinema_reservation_system_individual_auth/cinema_reservation_system_individual_auth/bin/Debug/net5.0/NLog.config
+2021-11-10 21:01:32.7451 Info Configuration initialized.
+2021-11-10 21:01:32.7457 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-10 21:06:02.9459 Info Message Template Auto Format enabled
+2021-11-10 21:06:02.9570 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-10 21:06:02.9914 Info Adding target FileTarget(Name=exceptions)
+2021-11-10 21:06:02.9914 Info Adding target FileTarget(Name=allfile)
+2021-11-10 21:06:03.0506 Info Validating config: TargetNames=allfile, exceptions, ConfigItems=40, FilePath=/Users/appvinio/VisualStudioProjects/cinema_reservation_system_individual_auth/cinema_reservation_system_individual_auth/bin/Debug/net5.0/NLog.config
+2021-11-10 21:06:03.0631 Info Configuration initialized.
+2021-11-10 21:06:03.0637 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-10 21:06:48.1182 Info Message Template Auto Format enabled
+2021-11-10 21:06:48.1296 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-10 21:06:48.1609 Info Adding target FileTarget(Name=exceptions)
+2021-11-10 21:06:48.1609 Info Adding target FileTarget(Name=allfile)
+2021-11-10 21:06:48.2005 Info Validating config: TargetNames=allfile, exceptions, ConfigItems=40, FilePath=/Users/appvinio/VisualStudioProjects/cinema_reservation_system_individual_auth/cinema_reservation_system_individual_auth/bin/Debug/net5.0/NLog.config
+2021-11-10 21:06:48.2131 Info Configuration initialized.
+2021-11-10 21:06:48.2131 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-11-10 21:11:51.0529 Info Message Template Auto Format enabled
+2021-11-10 21:11:51.0629 Info Loading assembly: NLog.Web.AspNetCore
+2021-11-10 21:11:51.0951 Info Adding target FileTarget(Name=exceptions)
+2021-11-10 21:11:51.0957 Info Adding target FileTarget(Name=allfile)
+2021-11-10 21:11:51.1370 Info Validating config: TargetNames=allfile, exceptions, ConfigItems=40, FilePath=/Users/appvinio/VisualStudioProjects/cinema_reservation_system_individual_auth/cinema_reservation_system_individual_auth/bin/Debug/net5.0/NLog.config
+2021-11-10 21:11:51.1505 Info Configuration initialized.
+2021-11-10 21:11:51.1505 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False

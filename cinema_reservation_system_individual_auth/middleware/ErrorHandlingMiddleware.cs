@@ -34,6 +34,11 @@ namespace cinema_reservation_system_individual_auth.middleware
                 context.Response.StatusCode = 404;
                 await context.Response.WriteAsync(notFoundException.Message);
             }
+            catch (RequestNotAllowedException requestNotAllowedException)
+            {
+                context.Response.StatusCode = 405;
+                await context.Response.WriteAsync(requestNotAllowedException.Message);
+            }
             catch (Exception e)
             {
                 _logger.LogError(e, e.Message);

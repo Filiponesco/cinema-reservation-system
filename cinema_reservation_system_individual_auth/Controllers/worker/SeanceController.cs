@@ -67,10 +67,10 @@ namespace cinema_reservation_system_individual_auth.Controllers.worker
 
             return Ok(seance);
         }
-        [HttpGet("{id}/{dateTime}")]
-        public ActionResult<IEnumerable<SeanceDto>> GetAllByIdAndDateTime([FromRoute] int id, [FromRoute] DateTime dateTime)
+        [HttpGet("byDate/{dateTime}")]
+        public ActionResult<IEnumerable<SeanceDto>> GetByDateTime([FromRoute] DateTime dateTime)
         {
-            var seance = _seanceService.GetAllByIdAndDateTime(dateTime);
+            var seance = _seanceService.GetAllByDateTime(dateTime);
 
             return Ok(seance);
         }
