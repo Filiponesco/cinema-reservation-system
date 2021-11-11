@@ -52,23 +52,6 @@ namespace cinema_reservation_system_individual_auth.Services.worker
                 throw new NotFoundException("Seance not found");
             }
 
-            var allSeats = seance.Room.SeatsCount;
-
-            var allReservationOnSeance = _dbContext.Reservations.Where(r => r.SeanceId == seance.Id);
-
-
-            var occupatiedSeats = 0;
-            foreach (var r in allReservationOnSeance)
-            {
-                occupatiedSeats += r.Count;
-            }
-            if (allSeats < occupatiedSeats + dto.Count)
-            {
-                throw new RequestNotAllowedException(String.Format("Can not make the reservation, because we have {0} free seats", allSeats - occupatiedSeats));
-            }
-
-
-
             _dbContext.Reservations.Add(reserve);
             _dbContext.SaveChanges();
 

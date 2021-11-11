@@ -68,7 +68,7 @@ namespace cinema_reservation_system_individual_auth
             services.AddScoped<IJwtService, JwtService>();
             services.AddScoped<ErrorHandlingMiddleware>();
 
-            services.AddScoped<IAdminAccountService, AdminAccountService>();
+            services.AddScoped<IAccountService, AccountService>();
             services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
             services.AddScoped<IValidator<RegisterAdminDto>, RegisterUserDtoValidator>();
 

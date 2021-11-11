@@ -4,7 +4,9 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
+using AutoMapper;
 using cinema_reservation_system_individual_auth.Exceptions;
+using cinema_reservation_system_individual_auth.models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -13,20 +15,22 @@ namespace cinema_reservation_system_individual_auth.Services
 {
     public interface IJwtService
     {
-        string GenerateJwt(LoginDto dto);
+        LoginResponseDto GenerateJwt(LoginDto dto);
     }
     public class JwtService : IJwtService
     {
         private readonly CinemaDbContext _context;
         private readonly IPasswordHasher<User> _passwordHasher;
         private readonly AuthenticationSettings _authenticationSettings;
-        public JwtService(CinemaDbContext context, IPasswordHasher<User> passwordHasher, AuthenticationSettings authenticationSettings)
+        private readonly IMapper _mapper;
+        public JwtService(CinemaDbContext context, IPasswordHasher<User> passwordHasher, AuthenticationSettings authenticationSettings, IMapper mapper)
         {
             _context = context;
             _passwordHasher = passwordHasher;
             _authenticationSettings = authenticationSettings;
+            _mapper = mapper;
         }
-        public string GenerateJwt(LoginDto dto)
+        public LoginResponseDto GenerateJwt(LoginDto dto)
         {
             var user = _context.Users
                 .Include(u => u.Role)
@@ -66,7 +70,12 @@ namespace cinema_reservation_system_individual_auth.Services
                 signingCredentials: cred);
 
             var tokenHandler = new JwtSecurityTokenHandler();
-            return tokenHandler.WriteToken(token);
+            var jwt = tokenHandler.WriteToken(token);
+            return new LoginResponseDto()
+            {
+                Token = jwt,
+                UserDto = _mapper.Map<UserDto>(user)
+            };
 
         }
     }
