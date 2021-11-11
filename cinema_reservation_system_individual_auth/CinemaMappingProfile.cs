@@ -13,6 +13,7 @@ namespace cinema_reservation_system_individual_auth
         public CinemaMappingProfile()
         {
 
+
             CreateMap<User, LoginDto>()
                 .ForMember(m => m.Password, c => c.MapFrom(s => CaesarCipher.Decipher(s.Password, Consts.CeasarCipherKey)));
 
