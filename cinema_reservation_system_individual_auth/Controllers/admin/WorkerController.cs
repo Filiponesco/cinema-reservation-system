@@ -46,11 +46,11 @@ namespace cinema_reservation_system_individual_auth.Controllers.admin
 
 
         [HttpGet("{id}")]
-        public ActionResult<UserDto> Get([FromRoute] int id)
+        public ActionResult<WorkerDto> Get([FromRoute] int id)
         {
-            var restaurant = _workerService.GetById(id);
+            WorkerDto worker = _workerService.GetById(id);
 
-            return Ok(restaurant);
+            return Ok(worker);
         }
 
     }
