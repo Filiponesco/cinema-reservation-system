@@ -28,11 +28,11 @@ namespace cinema_reservation_system_individual_auth.Controllers.admin
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<UserDto>> GetAll()
+        public ActionResult<IEnumerable<WorkerDto>> GetAll()
         {
-            var restaurantsDtos = _workerService.GetAll();
+            var workerDtos = _workerService.GetAll();
 
-            return Ok(restaurantsDtos);
+            return Ok(workerDtos);
         }
 
         [HttpDelete("{id}")]
