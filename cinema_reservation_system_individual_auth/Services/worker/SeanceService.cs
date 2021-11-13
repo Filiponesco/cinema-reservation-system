@@ -42,7 +42,7 @@ namespace cinema_reservation_system_individual_auth.Services.worker
         {
             var Seance = _mapper.Map<Seance>(dto);
 
-            var seances = _dbContext.Seances.Include(s => s.Movie).Include(s => s.Room);
+            var seances = _dbContext.Seances.Include(s => s.Movie).Include(s => s.Room).Where(s => s.RoomId == dto.RoomId);
 
             foreach (var s in seances) {
                 var starTime = s.DateTime;
@@ -78,6 +78,8 @@ namespace cinema_reservation_system_individual_auth.Services.worker
         {
             var Seances = _dbContext
                 .Seances
+                .Include(s => s.Room)
+                .Include(s => s.Movie)
                 .ToList();
 
             var SeancesDtos = _mapper.Map<List<SeanceDto>>(Seances);
@@ -87,7 +89,11 @@ namespace cinema_reservation_system_individual_auth.Services.worker
 
         public IEnumerable<SeanceDto> GetAllByDateTime(DateTime dateTime)
         {
-            var seances = _dbContext.Seances.Where(s => s.DateTime.Year == dateTime.Year && s.DateTime.Month == dateTime.Month && s.DateTime.Day == dateTime.Day);
+            var seances = _dbContext.Seances
+                .Include(s => s.Room)
+                .Include(s => s.Movie)
+                .Where(s => s.DateTime.Year == dateTime.Year && s.DateTime.Month == dateTime.Month && s.DateTime.Day == dateTime.Day);
+              
             var seancesDtos = _mapper.Map<List<SeanceDto>>(seances);
             return seancesDtos.OrderByDescending(s => s.DateTime);
         }
@@ -95,7 +101,10 @@ namespace cinema_reservation_system_individual_auth.Services.worker
         public SeanceDto GetById(int id)
         {
             var Seances = _dbContext.Seances
+                .Include(s => s.Room)
+                .Include(s => s.Movie)
                 .FirstOrDefault(r => r.Id == id);
+              
 
             if (Seances is null)
                 throw new NotFoundException("Seance not found");
