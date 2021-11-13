@@ -70,7 +70,7 @@ namespace cinema_reservation_system_individual_auth
 
             services.AddScoped<IAccountService, AccountService>();
             services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
-            services.AddScoped<IValidator<RegisterAdminDto>, RegisterUserDtoValidator>();
+            services.AddScoped<IValidator<RegisterAdminDto>, RegisterAdminDtoValidator>();
 
 
             services.AddScoped<IWorkerService, WorkerService>();
@@ -91,6 +91,9 @@ namespace cinema_reservation_system_individual_auth
 
             services.AddScoped<IReserveService, ReserveService>();
             services.AddScoped<IValidator<CreateReserveDto>, CreateReserveDtoValidator>();
+
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IValidator<RegisterUserDto>, RegisterUserDtoValidator>();
 
             services.AddScoped<IUserContextService, UserContextService>();
             services.AddHttpContextAccessor();

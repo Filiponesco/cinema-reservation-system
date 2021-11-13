@@ -18,7 +18,7 @@ namespace cinema_reservation_system_individual_auth
                 .ForMember(m => m.Password, c => c.MapFrom(s => CaesarCipher.Decipher(s.Password, Consts.CeasarCipherKey)));
 
             CreateMap<RegisterAdminDto, User>()
-                .ForMember(m => m.RoleId, c => c.MapFrom(s => 2))
+                .ForMember(m => m.RoleId, c => c.MapFrom(s => 3))
                 .ForMember(m => m.Password, c => c.MapFrom(s => CaesarCipher.Encipher(RandomStringGenerator.RandomString(Consts.RandomPasswordLength), Consts.CeasarCipherKey)));
 
 
@@ -26,9 +26,16 @@ namespace cinema_reservation_system_individual_auth
             CreateMap<User, WorkerDto>()
                 .ForMember(m => m.Password, c => c.MapFrom(s => CaesarCipher.Decipher(s.Password, Consts.CeasarCipherKey)));
 
+
             CreateMap<CreateWorkerDto, User>()
                 .ForMember(m => m.RoleId, c => c.MapFrom(s => 2))
                 .ForMember(m => m.Password, c => c.MapFrom(s => CaesarCipher.Encipher(RandomStringGenerator.RandomString(Consts.RandomPasswordLength), Consts.CeasarCipherKey)));
+
+
+            CreateMap<RegisterUserDto, User>()
+                .ForMember(m => m.RoleId, c => c.MapFrom(s =>1))
+                .ForMember(m => m.Password, c => c.MapFrom(s => CaesarCipher.Encipher(s.Password, Consts.CeasarCipherKey)));
+
 
             CreateMap<Room, RoomDto>();
             CreateMap<CreateRoomDto, Room>();

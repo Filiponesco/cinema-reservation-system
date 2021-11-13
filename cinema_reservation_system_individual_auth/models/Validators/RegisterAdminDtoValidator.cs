@@ -7,9 +7,9 @@ using FluentValidation;
 
 namespace cinema_reservation_system_individual_auth.Validators
 {
-    public class RegisterUserDtoValidator : AbstractValidator<RegisterUserDto>
+    public class RegisterAdminDtoValidator : AbstractValidator<RegisterAdminDto>
     {
-        public RegisterUserDtoValidator(CinemaDbContext dbContext)
+        public RegisterAdminDtoValidator(CinemaDbContext dbContext)
         {
             RuleFor(x => x.Email)
                 .NotEmpty()
