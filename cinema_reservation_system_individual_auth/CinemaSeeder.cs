@@ -29,7 +29,7 @@ namespace cinema_reservation_system_individual_auth
                     _dbContext.Users.Add(new User()
                     {
                         Email = "admin@admin.com",
-                        Password = "adminadmin",
+                        Password = "nqzvanqzva",
                         RoleId = 3
 
                     });
